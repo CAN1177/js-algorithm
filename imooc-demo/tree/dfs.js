@@ -32,7 +32,7 @@ const tree = {
 
 const dfs = (root) => {
   console.log(root.val);
-  root.children.forEach(dfs);
+  root.children.map(dfs);
 };
 
 dfs(tree);

@@ -8,6 +8,7 @@ b.next = c;
 c.next = d;
 
 // 遍历链表
+// 声明指针
 let p = a;
 while (p) {
   console.log(p.val);

@@ -1,7 +1,7 @@
-const obj = {};
-Object.prototype.x = "x"
-const fun1 = () => {};
-const arr = [];
+// const obj = {};
+// Object.prototype.x = "x"
+// const fun1 = () => {};
+// const arr = [];
 
 
 

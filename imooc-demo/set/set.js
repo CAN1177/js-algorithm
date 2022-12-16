@@ -7,13 +7,14 @@ mySet.add('some text');
 let o = { a: 1, b: 2 };
 mySet.add(o);
 mySet.add({ a: 1, b: 2 });
+console.log("%c Line:10 🍋 mySet", "color:#4fff4B", mySet);
 
 const has = mySet.has(o);
 
 mySet.delete(5);
 
 
-for(let [key, value] of mySet.entries()) console.log(key, value);
+for (let [key, value] of mySet.entries()) console.log(key, value);
 
 const myArr = Array.from(mySet);
 
