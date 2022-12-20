@@ -3,11 +3,13 @@ class MinHeap {
     this.heap = [];
   }
 
+  // 交换节点方法
   swap(i1, i2) {
     const temp = this.heap[i1];
     this.heap[i1] = this.heap[i2];
     this.heap[i2] = temp;
   }
+  // 获取父节点
   getParentIndex(i) {
     // return Math.floor((i-1) / 2)
     // 直接取商的简便方法
@@ -47,6 +49,7 @@ class MinHeap {
   shiftDown(index) {
     const leftIndex = this.getLeftIndex(index);
     const rightIndex = this.getRightIndex(index);
+    // 左侧子节点 小于 当前节点就交换
     if (this.heap[leftIndex] < this.heap[index]) {
       this.swap(leftIndex, index);
       this.shiftDown(leftIndex);
@@ -57,17 +60,23 @@ class MinHeap {
     }
   }
 
+  // 插入方法
   insert(value) {
     this.heap.push(value);
+    // 上移值的下标
     this.shiftUp(this.heap.length - 1);
   }
+
+  // 删除方法
   pop() {
     this.heap[0] = this.heap.pop();
     this.shiftDown(0);
   }
+  // 获取堆顶
   peek() {
     return this.heap[0];
   }
+  // 获取堆大小
   size() {
     return this.heap.length;
   }
