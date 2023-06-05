@@ -3,9 +3,18 @@ const b = { val: "b" };
 const c = { val: "c" };
 const d = { val: "d" };
 
+// 建立关系
 a.next = b;
 b.next = c;
 c.next = d;
+
+// 插入
+const e = { val: "e" };
+c.next = e;
+e.next = d;
+
+// 删除
+// c.next = d;
 
 // 遍历链表
 // 声明指针
@@ -14,11 +23,3 @@ while (p) {
   console.log(p.val);
   p = p.next;
 }
-
-// 插入
-const e = { val: "e" };
-c.next = e;
-e.next = d;
-
-// 删除
-c.next = d

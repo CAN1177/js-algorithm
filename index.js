@@ -1,17 +1,18 @@
 /**
- * @param {number[]} nums
- * @param {number} k
- * @return {number[]}
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
  */
-var topKFrequent = function(nums, k) {
-  const map = new Map();
-   for(let item of nums){
-       map.set(item, (map.get(item) || 0) + 1);
-   }
-   const arr = [...map].sort((a,b) => b[1] - a[1]);
-   const result = [];
-   for(let i = 0; i < k; i++){
-       result.push(arr[i][0]);
-   }
-   return result;
+/**
+ * @param {ListNode} node
+ * @return {void} Do not return anything, modify node in-place instead.
+ */
+var deleteNode = function (node) {
+  // 把被删除节点的值改为下个节点的值
+  node.val = node.next.val;
+  debugger;
+  // 删除下个节点
+  node.next = node.next.next;
 };
